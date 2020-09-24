@@ -6,7 +6,7 @@ function buildtable(){
     tbody.html("")
     data.forEach((dataRow) => {
         let row = tbody.append("tr");
-        Object.values(dataRow).array.forEach((val) => {
+        Object.values(dataRow).forEach((val) => {
             let cell = row.append("td")
             cell.text(val)
             
@@ -26,3 +26,4 @@ function handleclick(){
 }
 d3.selectAll("#filter-btn").on("click",handleclick)
 buildtable(tableData)
+
